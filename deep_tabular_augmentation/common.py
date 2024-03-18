@@ -1,4 +1,7 @@
-from collections import Iterable
+try:
+    from collections.abc import Iterable
+except ImportError:
+    from collections import Iterable
 import re
 
 _camel_re1 = re.compile('(.)([A-Z][a-z]+)')
